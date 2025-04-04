@@ -1,0 +1,172 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    background: linear-gradient(to right, blue, white);
+
+}
+
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5%;
+    background-image: url(test_img/bg3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    
+
+}
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 45px;
+    transition: ease-in-out 0.5s;
+}
+
+nav ul li a:hover{
+    color: white;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+.t1{
+    text-align: center;
+    text-decoration: underline;
+margin-bottom: 60px;  
+transition: ease-in-out 0.6s;  
+
+}
+
+.t1:hover{
+    color: orangered;
+    cursor: pointer;
+}
+
+.t2{
+    text-decoration: underline;
+    transition: ease-in-out 0.66s;
+}
+
+.t2:hover{
+    color: orangered;
+    cursor: pointer;
+}
+
+
+.l1{
+    list-style: none;
+}
+.p1{
+    margin-bottom: 30px;
+
+
+}
+
+
+.content{
+    display: flex;
+    margin-bottom: 40px;
+
+}
+
+.content div{
+min-height: 700px;
+margin: 60px;
+
+
+
+}
+
+.profile1{
+    display: flex;
+    min-height: 600px;
+width: 95%;
+    margin: 0px auto;
+  
+}
+
+.profile1 div{
+    min-height: 600px;
+    width: 95%;
+    margin: 1px;
+
+}
+
+.doc{
+min-height: 600px;
+width: 95%;
+    position: relative;
+    left: 8px;
+}
+
+#doc1{
+    position: relative;
+    left: 110px;
+    
+}
+
+
+footer{
+    height: 500px;
+    width: 100%;
+    color: black;
+    background-image: url(test_img/bg4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+
+ #about_content{
+    text-align: center;
+    font-size: 50px;
+
+ }.footer_div ul li a{
+    color: black;
+    text-decoration: none;
+    transition: ease-in-out 0.5s;
+    border: none;
+ }
+
+ .footer_div ul li a:hover{
+    color: white;
+    
+    transform: scale(1.1);
+    
+ }
+
+
+ .footer_div ul li{
+    margin: 30px;
+    list-style: none;
+ }
+
+ .hd{
+position: relative;
+left: 30px;
+ }
+
+ 

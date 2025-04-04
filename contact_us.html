@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact_us.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="test.html"> Todays Health</a></li>
+        
+        
+        </ul></nav>
+       
+    </header>
+
+    <div class="container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">  Kumasi</div>
+              <div class="text-two"> "13th Avenue Main street"</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">+233 594 583 513</div>
+              <div class="text-two">+233 50 9617 050</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">emilfianko@gmail.com </div>
+              <div class="text-two">emifianko717@gmail.com</div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="topic-text"> Want to contact us?</div>
+            <p>Our team is ready to provide answers to your query and your concerns. Contact us now for support</p>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter your email" />
+              </div>
+              <div class="input-box message-box">
+                <textarea placeholder="Enter your message"></textarea>
+              </div>
+              <div class="button">
+                <input type="button" value="Send Now" />
+
+            
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+<script>
+  // Add event listener to the "Send Now" button
+  document.querySelector('.button input').addEventListener('click', function () {
+    const name = document.querySelector('.input-box input[placeholder="Enter your name"]').value.trim();
+    const email = document.querySelector('.input-box input[placeholder="Enter your email"]').value.trim();
+    const message = document.querySelector('.message-box textarea').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill out all fields before sending.');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    alert(`Thank you, ${name}! Your message has been sent successfully.`);
+    clearForm();
+  });
+
+  // Function to validate email format
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  // Function to clear the form fields
+  function clearForm() {
+    document.querySelector('.input-box input[placeholder="Enter your name"]').value = '';
+    document.querySelector('.input-box input[placeholder="Enter your email"]').value = '';
+    document.querySelector('.message-box textarea').value = '';
+  }
+</script>
+      
+
+    </body>
+  
+
+
+
+      
+
+     
+    
+</body>
+</html>

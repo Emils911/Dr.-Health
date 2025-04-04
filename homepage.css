@@ -1,0 +1,197 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 34px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 34px;
+
+}
+
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5%;
+    background-image: url(test_img/bg3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    
+
+}
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 45px;
+    transition: ease-in-out 0.5s;
+}
+
+nav ul li a:hover{
+    color: white;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+.content{
+    display: flex;
+    min-height: 800px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, blue, white);
+}
+
+.content div{
+    min-height: 800px;
+    margin: 60px;
+    width: 700px;
+transition: ease-in-out 0.5s;
+}
+
+.content div:hover{
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px;
+    transform: scale(1.1);
+}
+
+
+.records{
+    position: relative;
+    left: 100px  ;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    height: 500px;
+    width: 500px;
+    border-color: aliceblue;
+    box-shadow: 0px 0px 10px;
+}
+#h1{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 45px;
+    transition: ease-in-out 0.6s;
+    
+}
+#h1:hover{
+    text-decoration: underline;
+}
+
+
+#book{
+position: relative;
+left: 250px;
+transition: ease-in-out 0.5s;
+border-radius: 10px;
+border: none;
+font-size: 50px;
+
+
+}
+#book:hover{
+    transform: scale(1.1);
+    
+
+}
+
+
+.content2{
+    min-height: 800px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 5px 5px 5px 5px;
+    background: linear-gradient(to right, blue, white);
+}
+
+input{
+    margin: 30px;
+}
+
+.Submit{
+    position: relative;
+    left: 300px;
+}
+
+
+.form{
+    transition: ease-in-out 0.5s;
+}
+.form:hover{
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+.cn{
+    position: relative;
+    left: 110px;
+    margin-bottom: 70px;
+}
+
+.ps{
+    position: relative;
+    left: 100px;
+}
+
+footer{
+    height: 500px;
+    width: 100%;
+    color: black;
+    background-image: url(test_img/bg4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+
+ #about_content{
+    text-align: center;
+    font-size: 50px;
+
+ }.footer_div ul li a{
+    color: black;
+    text-decoration: none;
+    transition: ease-in-out 0.5s;
+    border: none;
+ }
+
+ .footer_div ul li a:hover{
+    color: white;
+    
+    transform: scale(1.1);
+    
+ }
+
+
+ .footer_div ul li{
+    margin: 30px;
+    list-style: none;
+ }
+
+ .hd{
+position: relative;
+left: 30px;
+ }
+
+ 

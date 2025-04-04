@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="test.html"> Todays Health</a></li>
+        
+        
+        </ul></nav>
+       
+    </header>
+
+
+
+<section class="content">
+   <div class="div1"> 
+    <img class="records" src="test_img/book appointment.jpeg" alt="records" >
+    <h1 id="h1"> Book an appoinntment</h1>
+    <p> <a href="book_appointment.html"> click here</a> to book an appointment and be served</p>
+</div>
+<div>
+    <img  class="records" src="test_img/doctor.jpeg" alt="doc">
+    <h1 id="h1"> Find a doctor</h1>
+    <button id="book"> Find a Doc</button>
+</div>
+
+<div>
+    <img  class="records" src="test_img/homecare.jpeg" alt=" doctor and paitent">
+    <h1 id="h1"> Services at your doorstep</h1>
+    <button id="book"> homecare</button>
+</div>
+</section>
+
+<section class="content2">
+         
+    <form class="form" action="homepage.html">
+        <label for="username"> Enter your Name:</label>
+        <input type="text" id="username"  required> <br>
+        
+        <label for="email"> Enter your Email:</label>   
+        <input type="text" id="email" required>  <br>
+        
+        <label for="password"> Password:</label>
+        <input class="ps" type="text"  id="password" required>  <br>
+        
+        <label for="contact"> Contact:</label>
+        <input class="cn" type="text" id="contact" required>  <br>
+        
+        <button id="book" > Submit</button>
+        </form>
+   
+      
+  
+</section>
+ 
+
+
+<footer>
+    
+    <h1 id="about_content"> Your Trusted Partner In health And Wellness</h1>
+    <h2 class="hd">join us on:</h2>
+<div class="footer_div">
+    <ul><li><a href="#">Youtube</a></li>
+        <li><a href="#">On X</a></li>
+        <li><a href="#"> Instagram</a></li>
+        <li><a href="#">Facebook</a></li>   
+    
+    </ul>
+</div>
+     <script>
+    // Add event listener to "Find a Doc" button
+    document.querySelectorAll('#book')[0].addEventListener('click', function() {
+        alert('Redirecting to find a doctor page...');
+        window.location.href = 'find_doctor.html';
+    });
+
+    // Add event listener to "Homecare" button
+    document.querySelectorAll('#book')[1].addEventListener('click', function() {
+        alert('Redirecting to homecare services...');
+        window.location.href = 'homecare_services.html';
+    });
+
+    // Form validation
+    document.querySelector('.form').addEventListener('submit', function(event) {
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+
+        if (!username || !email || !password || !contact) {
+            alert('Please fill out all fields.');
+            event.preventDefault();
+        } else if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            event.preventDefault();
+        } else {
+            alert('Form submitted successfully!');
+        }
+    });
+
+    // Email validation function
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Add scroll animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.content div, .content2, footer');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elements.forEach(element => observer.observe(element));
+    });
+
+    // Add hover effect to navigation links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('mouseover', function() {
+            this.style.color = 'white';
+            
+
+            this.style.textDecoration = 'underline';
+        });
+        link.addEventListener('mouseout', function() {
+            this.style.color = '';
+            this.style.textDecoration = '';
+        });
+    });
+
+    // Add smooth scroll effect for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Add a fade-in effect for images
+    document.querySelectorAll('img').forEach(image => {
+        image.style.opacity = 0;
+        image.style.transition = 'opacity 1s ease-in-out';
+        image.addEventListener('load', function() {
+            this.style.opacity = 1;
+        });
+    });
+     </script>
+</body>
+</html>
